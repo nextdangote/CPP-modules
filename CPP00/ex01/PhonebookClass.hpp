@@ -1,5 +1,5 @@
 #ifndef PHONEBOOKCLASS_HPP
- #define PHONEBOOKCLASSHPP
+ #define PHONEBOOKCLASS_HPP
 #include "ContactClass.hpp"
 
 class Phonebook
@@ -12,7 +12,8 @@ class Phonebook
 	Phonebook();
 	~Phonebook();
 	Phonebook	handle_input(std::string str, Phonebook repertoire);
-	Phonebook	init(Phonebook repertoire);
+	void	search(void);
+	void	display_contacts(Phonebook repertoire);
 };
 
 #endif

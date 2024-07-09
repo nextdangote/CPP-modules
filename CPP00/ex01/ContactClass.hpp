@@ -17,6 +17,7 @@ class   Contact
     Contact();
     ~Contact();
     Contact add();
+    void    show(int i);
 };
 
 #endif
