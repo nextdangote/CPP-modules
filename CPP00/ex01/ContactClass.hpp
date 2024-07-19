@@ -3,6 +3,8 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include <cstdlib>
+#include <limits>
 
 class   Contact
 {
@@ -18,6 +20,11 @@ class   Contact
     ~Contact();
     Contact add();
     void    show(int i);
+    int     check_number(std::string str);
+    void	write_first_nine(std::string str);
+    int     check_empty(void);
+    void    display(void);
+    void    show_instructions(void);
 };
 
 #endif
