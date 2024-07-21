@@ -27,9 +27,13 @@ Zombie* zombieHorde( int N, std::string name )
     Zombie* horde = static_cast<Zombie*>(operator new[](N * sizeof(Zombie)));
 
     // Use placement new to construct each Zombie object in the allocated memory
-    for (int i = 0; i < N; ++i)
+    for (int i = 0; i < N; i++)
+    {
         new (&horde[i]) Zombie(name);
+    }
     for(int j = 0; j < N; j++)
+    {
         horde[j].announce();
+    }
     return (horde);
 }

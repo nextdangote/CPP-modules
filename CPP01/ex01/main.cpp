@@ -38,7 +38,14 @@ int main(void)
         Zombie* zebi = newZombie(name2);
         delete zebi;
         Zombie* hamzaaa = zombieHorde(9, name3);
-        delete[] hamzaaa;
+        for (int i = 0; i < 9; ++i) 
+        {
+            hamzaaa[i].~Zombie();
+        }
+    // Free the allocated memory
+        operator delete[](hamzaaa);
+
+        //delete[] hamzaaa;
         
 }
 
