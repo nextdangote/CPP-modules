@@ -1,11 +1,22 @@
 #include "Weapon.hpp"
 
-Weapon::Weapon()
+const std::string   Weapon::getType() const
 {
-    std::cout << "Weapon was created" << std::endl;
+    return type;
 }
 
-Weapon::~Weapon()
+void    Weapon::setType(std::string NewType)
 {
-    std::cout << "Weapon was destructed" << std::endl;
+    this->type = NewType;
+    //type = NewType ( apparently works too )
+}
+
+Weapon::Weapon(std::string type) : type(type)
+{
+    std::cout << "Weapon type " << type << " was created" << std::endl << std::endl;
+}
+
+Weapon::~Weapon(void)
+{
+    std::cout << "Weapon type " << type << " was destructed" << std::endl << std::endl;
 }
