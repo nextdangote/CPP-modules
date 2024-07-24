@@ -3,6 +3,8 @@
 
 int main( void ) 
 {
+    // std::cout << "Hello world how are you doing" << std::endl;
+    // Fixed  a;
     Fixed a;
     Fixed b( a );
     Fixed c;
