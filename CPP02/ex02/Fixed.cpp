@@ -121,17 +121,18 @@ Fixed& Fixed::operator++()
 
 Fixed Fixed::operator--()
 {
-    this->fixed_point_value++;
+    this->fixed_point_value--;
     return (*this);
 }
 
 Fixed& Fixed::operator--(int)
 {
-    Fixed oldCopy;
+    // Fixed oldCopy;
 
-    oldCopy = *this;
-    this->fixed_point_value = this->fixed_point_value - 1;
-    return (oldCopy);
+    // oldCopy = *this;
+    this->fixed_point_value--;
+    // this->setRawBits(this->getRawBits() - 1);
+    return (*this);
 }
 
 

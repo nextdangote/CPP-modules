@@ -15,26 +15,27 @@ public:
     Fixed(const int other);
     Fixed(const float other);
     Fixed(const Fixed& other);
+    Fixed& operator=(const Fixed& other);
     //comparison >, <, >=, <=, == and !=
-    bool Fixed::operator==(const Fixed& other) const;
-    bool Fixed::operator>=(const Fixed& other) const;
-    bool Fixed::operator<=(const Fixed& other) const;
-    bool Fixed::operator!=(const Fixed& other) const;
+    bool    operator==(const Fixed& other) const;
+    bool    operator>=(const Fixed& other) const;
+    bool    operator<=(const Fixed& other) const;
+    bool    operator!=(const Fixed& other) const;
     bool    operator>(const Fixed& other) const;
-    bool Fixed::operator<(const Fixed& other) const;
+    bool    operator<(const Fixed& other) const;
 
     // calculus
-    Fixed operator+(const Fixed& other) const;
-    Fixed Fixed::operator*(const Fixed& other) const;
-    Fixed Fixed::operator-(const Fixed& other) const;
-    Fixed Fixed::operator/(const Fixed& other) const;
+    Fixed   operator+(const Fixed& other) const;
+    Fixed   operator*(const Fixed& other) const;
+    Fixed   operator-(const Fixed& other) const;
+    Fixed   operator/(const Fixed& other) const;
 
     // increment
     //Fixed Fixed::operator++();
-    Fixed& Fixed::operator++();
-    Fixed operator++(int);
-    Fixed operator--();
-    Fixed& operator--(int);
+    Fixed&  operator++();
+    Fixed   operator++(int);
+    Fixed   operator--();
+    Fixed&  operator--(int);
 
     ~Fixed();
     int getRawBits(void) const;
