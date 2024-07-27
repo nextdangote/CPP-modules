@@ -2,6 +2,6 @@
 
 FlagTrap::FlagTrap(std::string called)
 {
-
+    
 }
     ~FlagTrap();
