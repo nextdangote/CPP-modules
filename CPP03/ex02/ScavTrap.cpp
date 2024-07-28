@@ -28,3 +28,25 @@ void ScavTrap::guardGate()
 {
     std::cout << "Scavtrap is now in Gate keeper mode" << std::endl;
 }
+
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)// copy constructor
+{
+    this->AttackDamage = other.AttackDamage;
+    this->EnergyPoints = other.EnergyPoints;
+    this->HitPoints = other.HitPoints;
+    this->Name = other.Name;
+    std::cout << "Clap Trap was copy constructed" << std::endl;
+}
+
+ScavTrap&   ScavTrap::operator=(const ScavTrap& other) // copy assignment operator
+{
+    if(this != &other)
+    {
+        this->AttackDamage = other.AttackDamage;
+        this->EnergyPoints = other.EnergyPoints;
+        this->HitPoints = other.HitPoints;
+        this->Name = other.Name;
+    }
+    std::cout << "Clap Trap was copy assigned" << std::endl;
+    return *this;
+}

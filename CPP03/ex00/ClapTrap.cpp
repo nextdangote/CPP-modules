@@ -66,3 +66,26 @@ void ClapTrap::beRepaired(unsigned int amount)
     std::cout << this->Name << " used one point to heal themselves and has now " << this->EnergyPoints << " energy points" << std::endl;
 
 }
+
+ClapTrap::ClapTrap(const ClapTrap& other)// copy constructor
+{
+    this->AttackDamage = other.AttackDamage;
+    this->EnergyPoints = other.EnergyPoints;
+    this->HitPoints = other.HitPoints;
+    this->Name = other.Name;
+    std::cout << "Clap Trap was copy constructed" << std::endl;
+}
+
+ClapTrap&   ClapTrap::operator=(const ClapTrap& other) // copy assignment operator
+{
+    if(this != &other)
+    {
+        this->AttackDamage = other.AttackDamage;
+        this->EnergyPoints = other.EnergyPoints;
+        this->HitPoints = other.HitPoints;
+        this->Name = other.Name;
+    }
+    std::cout << "Clap Trap was copy assigned" << std::endl;
+    return *this;
+}
+

@@ -8,7 +8,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 DEPS = $(SRCS:.cpp=.d)
 
-TARGET = whatsThePassword
+TARGET = PolyPolyPocket
 
 $(TARGET) : $(OBJS)
 	$(CC) $(FLAGS) -o $(TARGET) $(OBJS)

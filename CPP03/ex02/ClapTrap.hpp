@@ -17,6 +17,8 @@ public:
     ClapTrap(void);
     ClapTrap(std::string called);
     ~ClapTrap();
+    ClapTrap(const ClapTrap& other); // copy constructor
+    ClapTrap&   operator=(const ClapTrap& other); // copy assignment operator
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);

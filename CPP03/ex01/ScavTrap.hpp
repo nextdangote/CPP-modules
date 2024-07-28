@@ -11,6 +11,8 @@ private :
 public :
     ScavTrap(std::string called);
     ~ScavTrap();
+    ScavTrap(const ScavTrap& other); // copy constructor
+    ScavTrap&   operator=(const ScavTrap& other); // copy assignment operator
     void attack(const std::string& target);
     void guardGate();
 };

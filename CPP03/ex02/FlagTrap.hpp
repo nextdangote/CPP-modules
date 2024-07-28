@@ -4,15 +4,16 @@
 #include <string>
 #include "ClapTrap.hpp"
 
-class Flagtrap : public ClapTrap
+class FlagTrap : public ClapTrap
 {
-
 private:
 
 public:
     FlagTrap(std::string called);
     ~FlagTrap();
     void highFivesGuys(void);
+    FlagTrap(const FlagTrap& other); // copy constructor
+    FlagTrap&   operator=(const FlagTrap& other); // copy assignment operator
 };
 
 #endif

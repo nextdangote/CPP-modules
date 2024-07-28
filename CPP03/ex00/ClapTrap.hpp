@@ -14,6 +14,8 @@ private:
     int HitPoints;
 
 public:
+    ClapTrap(const ClapTrap& other); // copy constructor
+    ClapTrap&   operator=(const ClapTrap& other); // copy assignment operator
     ClapTrap(std::string called);
     ~ClapTrap();
     void attack(const std::string& target);
